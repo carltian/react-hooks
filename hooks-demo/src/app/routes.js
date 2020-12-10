@@ -1,15 +1,24 @@
 import { routeMap } from './routeConfig';
-import Main from '../pages/main/Main';
-import Counter from '../pages/main/Counter';
+import Counter from '../pages/Counter';
+import UseState from '../pages/UseState';
+import UseEffect from '../pages/UseEffect';
 
 const routes = [
     {
         ...routeMap.main,
-        component: Main,
+        component: null,
     },
     {
       ...routeMap.counter,
       component: Counter,
-  },
+    },
+    {
+      ...routeMap.useState,
+      component: UseState,
+    },
+    {
+      ...routeMap.useEffect,
+      component: UseEffect,
+    },
 ];
 export default routes;
