@@ -5,7 +5,6 @@ If you have any question, please send e-mail to me
 
 
 ![image](https://github.com/carltian/react-hooks/blob/main/hooks-demo/public/homePage.png)
-![image](https://github.com/carltian/react-hooks/blob/main/hooks-demo/public/lastPage.png)
 
 ![image](https://github.com/carltian/react-hooks/blob/main/hooks-demo/public/lastPage.png)
 
