@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 /**
+ * @see https://stackoverflow.com/questions/53024496/state-not-updating-when-using-react-state-hook-within-setinterval
  *
  * 原因是由于传递到 setInterval 的闭包的回调仅访问第一次渲染中的时间变量，
  * 它无法访问后续渲染中的新时间值，因为第二次未调用Effect（）。
  * 时间在设置的Interval回调中始终具有 0 的值。
  *
- * @see https://stackoverflow.com/questions/53024496/state-not-updating-when-using-react-state-hook-within-setinterval
  */
 
 /**
+ * @see https://react.docschina.org/docs/hooks-reference.html#useeffect
  * 1.useEffect 用来处理 side effect。
  * DOM Mutations, subscriptions, timers, logging,
  * and other side effects are not allowed inside the main body of a function component
@@ -22,29 +23,29 @@ import React, { useState, useEffect } from 'react';
  *
  * 5.使用setState的函数式更新： It lets us specify how the state needs to change without referencing the current state
  */
-function Counter() {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      // setCount(count + 1);
-      setCount(prevState => prevState + 1);
-    }, 1000);
+function Counter () {
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            // setCount(count + 1);
+            setCount((prevState) => prevState + 1);
+        }, 1000);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
 
-  useEffect(() => {
+    useEffect(() => {
     // Update the document title using the browser API
-    document.title = `Time value ${count}`;
-  });
+        document.title = `Time value ${count}`;
+    });
 
-  return (
-    <>
-      <p>count: {count}</p>
-    </>
-  );
+    return (
+        <>
+            <p>count: {count}</p>
+        </>
+    );
 }
 
 export default Counter;
