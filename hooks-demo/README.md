@@ -1,3 +1,9 @@
+# Introduction
+This is a demo project about how to use React Hook
+If you have any question, please send e-mail to me
+1035723597@qq.com
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

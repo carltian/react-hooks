@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 .App {
   text-align: center;
 }
@@ -27,6 +28,28 @@
 .App-link {
   color: #61dafb;
 }
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: scroll;
+}
+
+.routers {
+  margin-right: 20px;
+  background: lightgreen;
+  padding: 20px;
+  height: 100%;
+}
+
+.demos {
+  height: 100%;
+  background: lightgray;
+  flex-grow: 1;
+  padding: 20px;
+}
+
 
 @keyframes App-logo-spin {
   from {
