@@ -7,6 +7,11 @@ import UseLayoutEffect from '../pages/UseLayoutEffect';
 import UseRef from '../pages/UseRef';
 import UseContext from '../pages/UseContext'
 import UseReducer from '../pages/UseReducer';
+import UseImperativeHandle from '../pages/UseImperativeHandle';
+import UseCallback from '../pages/UseCallback';
+import UseMemo from '../pages/UseMemo';
+import UseUserInfo from '../pages/UseUserInfo';
+import ContextReducer from '../pages/ContextReducer';
 
 const routes = [
     {
@@ -43,27 +48,27 @@ const routes = [
     },
     {
         ...routeMap.useImperativeHandle,
-        component: UseLayoutEffect
+        component: UseImperativeHandle
     },
     {
         ...routeMap.useCallback,
-        component: UseLayoutEffect
+        component: UseCallback
     },
     {
         ...routeMap.useMemo,
-        component: UseLayoutEffect
+        component: UseMemo
     },
     {
         ...routeMap.useUserInfo,
-        component: UseLayoutEffect
+        component: UseUserInfo
     },
     {
         ...routeMap.contextReducer,
-        component: UseLayoutEffect
-    },
-    {
-        ...routeMap.someQuestion,
-        component: UseLayoutEffect
+        component: ContextReducer
     }
+    // {
+    //     ...routeMap.someQuestion,
+    //     component: UseLayoutEffect
+    // }
 ];
 export default routes;

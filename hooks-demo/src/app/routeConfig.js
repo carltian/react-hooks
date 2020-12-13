@@ -38,9 +38,9 @@ const routeMap = {
     },
     contextReducer: {
         path: '/contextReducer'
-    },
-    someQuestion: {
-        path: '/someQuestion'
     }
+    // someQuestion: {
+    //     path: '/someQuestion'
+    // }
 };
 export { routeMap };
